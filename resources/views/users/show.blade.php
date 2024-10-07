@@ -16,13 +16,15 @@
             <table class="table table-bordered text-center">
                 <tbody>
                 <tr>
-                    <td><a href="{{ route('posts.index') }}" type="button" class="btn btn-block btn-secondary btn-sm">Main</a></td>
-                    <a href="{{ route('posts.edit', $id) }}" type="button" class="btn btn-primary">Edit</a>
-                    <form method="POST" action="{{ route('posts.destroy', $id) }}"  >
-                        @method('DELETE')
-                        @csrf
-                        <button type="submit" class="btn btn-outline-danger m-2">Delete</button>
-                    </form>
+                    <td>
+                        <a href="{{ route('users.index') }}" type="button" class="btn btn-block btn-secondary btn-sm">Main</a>
+                        <a href="{{ route('users.edit', $id) }}" type="button" class="btn btn-primary">Edit</a>
+                        <form method="POST" action="{{ route('users.destroy', $id) }} ">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-outline-danger m-2">Delete</button>
+                        </form>
+                    </td>
                 </tr>
                 </tbody>
             </table>
@@ -36,12 +38,12 @@
                                 <td>{{ $id }}</td>
                             </tr>
                             <tr>
-                                <td>Title</td>
-                                <td>{{ $post['title'] }}</td>
+                                <td>name</td>
+                                <td>{{ $users['name'] }}</td>
                             </tr>
                             <tr>
-                                <td>Content</td>
-                                <td>{{ $post['content'] }}</td>
+                                <td>Email</td>
+                                <td>{{ $users['email'] }}</td>
                             </tr>
                         </tbody>
                     </table>

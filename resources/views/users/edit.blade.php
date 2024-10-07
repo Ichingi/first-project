@@ -10,17 +10,21 @@
 </head>
 <body>
 <div class="container">
-    <a href="{{ route('posts.index') }}" type="button" class="btn btn-block btn-primary btn-sm">Back</a>
-    <form class="mt-3" method="post" action="{{ route('posts.update', $id) }}">
+    <a href="{{ route('users.index') }}" type="button" class="btn btn-block btn-primary btn-sm">Back</a>
+    <form class="mt-3" method="POST" action="{{ route('users.update', $id) }}">
         @csrf
         @method('PUT')
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Title</label>
-            <input type="text" name="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $post['title'] }}">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $users['name'] }}">
         </div>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Content</label>
-            <input type="text" name="content" class="form-control" id="exampleInputPassword1" value="{{ $post['content'] }}">
+            <label for="exampleInputPassword1" class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" id="exampleInputPassword1" value="{{ $users['email'] }}">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="text" name="password" class="form-control" id="exampleInputPassword1" value="{{ $password }}">
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
     </form>

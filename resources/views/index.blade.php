@@ -11,6 +11,7 @@
 <body>
 <div class="container">
     <a href="{{ route('posts.index') }}" class="btn btn-warning">Posts</a>
+    <a href="{{ route('users.index') }}" class="btn btn-success">Account</a>
 </div>
 </body>
 </html>

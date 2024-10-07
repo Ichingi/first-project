@@ -11,10 +11,14 @@
 <body>
 <div class="container">
     <a href="{{ route('posts.create') }}" class="btn btn-success">Create</a>
-
     <ul class="list-group mt-3">
         @foreach($posts as $post)
-            <a class="text-dark text-decoration-none" href="{{ route('posts.show', [$post['id']]) }}"><li class="list-group-item p-3"><span class="bg-primary p-2 text-white rounded-3 m-1">{{ $post['id'] }}</span>{{ $post['title'] }}</li></a>
+            <a class="text-dark text-decoration-none" href="{{ route('posts.show', [$post['id']]) }}">
+                <li class="list-group-item p-3.">
+                    <span class="bg-primary p-2 text-white rounded-3 m-1">{{ $post['id'] }}</span>
+                    {{ $post['title'] }}
+                </li>
+            </a>
         @endforeach
     </ul>
     <div class="mt-3">

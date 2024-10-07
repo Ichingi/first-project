@@ -18,7 +18,7 @@
                 <tr>
                     <td><a href="{{ route('posts.index') }}" type="button" class="btn btn-block btn-secondary btn-sm">Main</a></td>
                     <a href="{{ route('posts.edit', $id) }}" type="button" class="btn btn-primary">Edit</a>
-                    <form method="POST" action="{{ route('posts.destroy', $id) }}"  >
+                    <form method="POST" action="{{ route('posts.destroy', $id) }}">
                         @method('DELETE')
                         @csrf
                         <button type="submit" class="btn btn-outline-danger m-2">Delete</button>
